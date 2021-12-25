@@ -5,8 +5,8 @@ import { AiFillFacebook,AiFillTwitterSquare } from "react-icons/ai";
 
 const Banner = () => {
     return (
-        <div className="Header_component">
-            <Navbar bg="dark"  expand="lg">
+        <div className="Header_component" >
+            <Navbar bg="dark" style={{paddingTop:"20px",paddingBottom:"20px"}}  expand="lg">
                 <Container>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
