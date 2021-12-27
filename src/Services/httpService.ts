@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
 const instance = axios.create({
-    baseURL: process.env.REACT_APP_BASE_API,
+    baseURL: 'https://www.themealdb.com/api/json/v1/1/',
     timeout: 15000,
    
   });

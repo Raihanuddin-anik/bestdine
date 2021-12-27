@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card,Button } from 'react-bootstrap';
 
 
 const Meals = () => {
   
-//  const [melas, setMeas] = useState([]);
-//  console.log(melas)
 
- useEffect(()=>{
-    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-    .then(response => response.json())
-    .then(json => console.log(json))
- },[ ])
     return (
        
             <Card style={{ width: '18rem' }}>
