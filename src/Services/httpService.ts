@@ -6,7 +6,7 @@ const instance = axios.create({
    
   });
 
-  const responseBody = (res: AxiosResponse) => res.data;
+  const responseBody = (res: AxiosResponse) => res.data.categories;
 
   const requests = {
       get: (url: string) => instance.get(url).then(responseBody),

@@ -1,20 +1,31 @@
 import React from 'react';
-import { Card,Button } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
+import { IProduct } from '../../types';
+import Meal from '../Common/Meal';
 
+interface IProps {
+    data: any;
+    isLoading: boolean;
+}
 
-const Meals = () => {
-  
+const Meals = ({ data, isLoading }: IProps) => {
 
+console.log(data)
     return (
-       
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card>
-     
+        <div> 
+        <Container>
+            <Row>
+               
+                    {
+                        data?.map((meal: IProduct) => (
+                            <Meal key={meal.idCategory}
+                                meal={meal} />
+                        ))
+                    }
+            
+            </Row>
+        </Container>
+        </div>
     );
 };
 

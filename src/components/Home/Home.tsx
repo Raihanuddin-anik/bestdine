@@ -1,22 +1,18 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
+import customHook from '../../hooks/customHook';
 import MealService from '../../Services/MealService';
 // import { IProduct } from '../../types';
 import Banner from './Banner';
 import Meals from './Meals';
 
 const Home = () => {
-
-   
-    useEffect(()=>{
-      MealService.getAllMeal()
-      .then(res=>console.log(res))
-    })
-   
+ const {data, isLoading} = customHook(MealService.getAllMeal) 
+   console.log(data)
     return (
         <Container>
             <Banner/>
-            <Meals/>
+            <Meals isLoading={isLoading} data={data}/>
         </Container>
     );
 };
