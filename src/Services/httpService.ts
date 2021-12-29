@@ -1,12 +1,12 @@
 import axios, { AxiosResponse } from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://www.themealdb.com/api/json/v1/1/',
+    baseURL: 'https://www.themealdb.com/api/json/v1/1',
     timeout: 15000,
    
   });
 
-  const responseBody = (res: AxiosResponse) => res.data.data;
+  const responseBody = (res: AxiosResponse) => res.data;
 
   const requests = {
       get: (url: string) => instance.get(url).then(responseBody),

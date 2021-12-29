@@ -11,4 +11,4 @@ class MealService {
         return requests.get('/random.php');
     }
 }  
-export default new MealService
+export default new MealService();
